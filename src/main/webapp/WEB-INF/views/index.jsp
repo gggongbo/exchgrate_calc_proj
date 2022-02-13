@@ -19,7 +19,7 @@
 	</div>
 	<!-- /.content-header -->
 	
-	<form role="form" method="post" action="exchgrateCalc.do">
+	<form role="form">
 		<div class="content-body">
 			<table class="table table-unbordered">
 				<tr>
@@ -74,9 +74,9 @@
 			
 			//환율 계산 Start
 			$.ajax({
-				  url: "/exchgrateCalc.do",
+				  url: "/exchgrateCalc/get",
 				  data: formData,
-				  type: 'POST',
+				  type: 'GET',
 				  async: false, 
 				  dataType: 'json',
 				  success: function(data){      
