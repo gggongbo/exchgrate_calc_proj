@@ -31,7 +31,7 @@ public class MainController {
 	}
 	
 	//환율계산 controller
-	@RequestMapping(value = "/exchgrateCalc.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/exchgrateCalc/get", method = RequestMethod.GET)
 	@ResponseBody
 	public ExchgrateCalcReturnDTO exchgrateCalc(ExchgrateCalcParamDTO exchgrateCalcParamDTO) {
 		//logger.info(exchgrateCalcParamDTO.toString());
