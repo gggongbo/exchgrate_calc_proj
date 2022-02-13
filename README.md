@@ -22,5 +22,5 @@
 
 ## API 정보
 No|Method|URI|Parameter|Return|Description
----|---|---|---|---|
+---|---|---|---|---|---|
 1|GET|/exchgrateCalc/get|{countryCode:"수취국가코드", currencyAmount:"송금액"}|{exchgRate:"환율", getCurrencyAmount:"수취금액"}|환율 계산(USD -> KRW,JPY,PHP)
