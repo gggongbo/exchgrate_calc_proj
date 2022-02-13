@@ -18,7 +18,7 @@
 2. Server Project 생성(Tomcat v9.0) 후 프로젝트 add
 3. application.properties의 exchgrate.calc.access.key에 https://currencylayer.com/의 api key입력한 후 실행
 (첫 실행 완료 후 create -> validate로 변경)
-4. IDE에서 생성한 Server Project 실행
+4. IDE에서 생성한 Server Project 실행하여 접속
 
 ## API 정보
 No|Method|URI|Parameter|Return|Description
