@@ -8,9 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import com.calc.exchgrate.dto.ExchgrateCalcParamDTO;
-import com.calc.exchgrate.dto.ExchgrateCalcReturnDTO;
 import com.calc.exchgrate.service.ExchgrateCalcService;
 
 /**
@@ -26,24 +23,7 @@ public class MainController {
 	
 	//root 경로 접속 controller
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String main(Locale locale, Model model) {
+	public String main(Model model) {
 		return "index";
 	}
-	
-	//환율계산 controller
-	@RequestMapping(value = "/exchgrateCalc/get", method = RequestMethod.GET)
-	@ResponseBody
-	public ExchgrateCalcReturnDTO exchgrateCalc(ExchgrateCalcParamDTO exchgrateCalcParamDTO) {
-		//logger.info(exchgrateCalcParamDTO.toString());
-		ExchgrateCalcReturnDTO returnDTO = null;
-		
-		try {
-			returnDTO = exchgrateCalcService.getExchgRateCalc(exchgrateCalcParamDTO);
-		}catch (Exception e) {
-			logger.error(e.getMessage());
-		}
-		
-		return returnDTO;
-	}
-	
 }
